@@ -47,6 +47,21 @@ class CalcDistanceController extends BaseController
         return $response;
     }
 
+    /**
+     * @return float|int
+     */
+    public function calcDuration()
+    {
+        return $this->distance / $this->avgSpeed();
+    }
+
+    /**
+     * @return int
+     */
+    public function avgSpeed()
+    {
+        return 65;
+    }
 
     /**
      * @return float|int
